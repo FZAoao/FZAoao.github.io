@@ -1,76 +1,227 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FZAoao links</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FZAoao 的个人网站：Furry 控、龙崽兽设、代码创作者。">
+  <title>FZAoao | Personal Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>FZAoao links</h1>
-    <p class="subtitle">FZ 链接站</p>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="搜索链接..." />
+  <div class="grain"></div>
+
+  <main class="app-container">
+    <header class="navbar">
+      <a class="logo" href="#top" aria-label="FZAoao home">FZAOAO</a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+        <a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a>
+        <a class="nav-link" href="#tools" data-i18n="nav.tools">Tools</a>
+        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a>
+        <a class="nav-link" href="#links" data-i18n="nav.links">Links</a>
+      </nav>
+      <div class="toggle-group" aria-label="Site settings">
+        <button class="toggle-btn" type="button" data-lang-toggle>中文</button>
+        <button class="toggle-btn" type="button" data-theme-toggle>Dark</button>
+      </div>
+    </header>
+
+    <section id="top" class="hero" aria-labelledby="site-title">
+      <div class="hero-subtitle-container">
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Furry / Dragon Cub / Developer</p>
+      </div>
+      <div class="hero-title-line">
+        <h1 id="site-title" class="hero-title">FZAOAO</h1>
+      </div>
+      <p class="hero-desc">
+        <span data-i18n="hero.desc">I am FZAoao, a furry fan with a dragon cub fursona. I turn ideas into code with Node.js, Python, Java, C, JavaScript, and Vue. I use VSCode and IDEA, and I run FZLink, CubeXMC, and S3API.</span>
+      </p>
+      <div class="hero-actions">
+        <a class="solid-btn" href="https://space.bilibili.com/3546596641868091" target="_blank" rel="noreferrer">Bilibili</a>
+        <a class="line-btn" href="mailto:mcofprc@outlook.com" data-i18n="hero.email">Email Me</a>
+      </div>
+    </section>
+
+    <div class="marquee-container" aria-hidden="true">
+      <div class="marquee-content">
+        <span>CODE</span>
+        <span>FURRY</span>
+        <span>DRAGON CUB</span>
+        <span>CREATE</span>
+        <span>FZAOAO</span>
+        <span>CODE</span>
+        <span>FURRY</span>
+        <span>DRAGON CUB</span>
+        <span>CREATE</span>
+        <span>FZAOAO</span>
+      </div>
     </div>
-  </header>
 
-  <main id="app"></main>
+    <section id="about" class="info-section">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section.about">About</h2>
+      </div>
+      <div class="profile-grid">
+        <article class="profile-card">
+          <span class="profile-label" data-i18n="about.name">Name</span>
+          <strong>FZAoao</strong>
+        </article>
+        <article class="profile-card">
+          <span class="profile-label" data-i18n="about.identity">Identity</span>
+          <strong data-i18n="about.identityValue">Furry Fan</strong>
+        </article>
+        <article class="profile-card">
+          <span class="profile-label" data-i18n="about.fursona">Fursona</span>
+          <strong data-i18n="about.fursonaValue">Dragon Cub</strong>
+        </article>
+        <article class="profile-card profile-card-wide">
+          <span class="profile-label" data-i18n="about.intro">Intro</span>
+          <p data-i18n="about.introText">I love the furry world and enjoy building my own little universe with code. This site collects my identity, tech stack, projects, and links.</p>
+        </article>
+      </div>
+    </section>
 
-  <footer>
-    <p>FZAoao links &mdash; 2023 <span>by FZAoao</span></p>
-  </footer>
+    <section id="stack" class="list-section">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section.stack">Stack</h2>
+      </div>
+      <div class="interactive-list" aria-label="技术栈列表">
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">NODEJS</h3>
+            <span class="badge">Backend</span>
+          </div>
+          <p class="list-item-desc" data-i18n="stack.node">I use JavaScript for backends, APIs, tools, and automation scripts.</p>
+        </article>
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">PYTHON</h3>
+            <span class="badge">Script</span>
+          </div>
+          <p class="list-item-desc" data-i18n="stack.python">Great for quick ideas, data processing, and practical utilities.</p>
+        </article>
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">JAVA</h3>
+            <span class="badge">App</span>
+          </div>
+          <p class="list-item-desc" data-i18n="stack.java">Used for structured projects, application development, and OOP.</p>
+        </article>
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">C</h3>
+            <span class="badge">Low Level</span>
+          </div>
+          <p class="list-item-desc" data-i18n="stack.c">Useful for understanding low-level logic, memory, and system-oriented programming.</p>
+        </article>
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">JS / VUE</h3>
+            <span class="badge">Frontend</span>
+          </div>
+          <p class="list-item-desc" data-i18n="stack.vue">For web interfaces, interactions, and frontend applications.</p>
+        </article>
+      </div>
+    </section>
 
-  <script src="links.js"></script>
-  <script>
-    function render(data) {
-      const app = document.getElementById('app');
-      app.innerHTML = '';
-      data.forEach(category => {
-        const section = document.createElement('section');
-        section.innerHTML = `<h2>${category.name}</h2><div class="card-grid"></div>`;
-        const grid = section.querySelector('.card-grid');
-        category.links.forEach(link => {
-          const card = document.createElement('a');
-          card.className = 'card';
-          card.href = link.url;
-          card.target = '_blank';
-          card.rel = 'noopener noreferrer';
-          card.innerHTML = `
-            <div class="card-icon">${link.icon || '🔗'}</div>
-            <div class="card-info">
-              <span class="card-name">${link.name}</span>
-              <span class="card-desc">${link.desc || ''}</span>
-            </div>
-          `;
-          grid.appendChild(card);
-        });
-        app.appendChild(section);
-      });
-    }
+    <section id="tools" class="list-section">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section.tools">Tools</h2>
+      </div>
+      <div class="interactive-list" aria-label="开发工具列表">
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">VSCODE</h3>
+            <span class="badge">Editor</span>
+          </div>
+          <p class="list-item-desc" data-i18n="tools.vscode">My daily editor for frontend work, scripts, Node.js, and fast experiments.</p>
+        </article>
+        <article class="list-item">
+          <div class="list-item-header">
+            <h3 class="list-item-title">IDEA</h3>
+            <span class="badge">IDE</span>
+          </div>
+          <p class="list-item-desc" data-i18n="tools.idea">My IDE for Java projects, engineering workflows, and larger codebases.</p>
+        </article>
+      </div>
+    </section>
 
-    function filterLinks(query) {
-      if (!query.trim()) {
-        render(links);
-        return;
-      }
-      const q = query.toLowerCase();
-      const filtered = links.map(cat => ({
-        ...cat,
-        links: cat.links.filter(l =>
-          l.name.toLowerCase().includes(q) ||
-          (l.desc && l.desc.toLowerCase().includes(q)) ||
-          (l.url && l.url.toLowerCase().includes(q))
-        )
-      })).filter(cat => cat.links.length > 0);
-      render(filtered);
-    }
+    <section id="projects" class="info-section">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section.projects">Projects</h2>
+      </div>
+      <div class="project-showcase">
+        <article class="project-item">
+          <span class="profile-label" data-i18n="projects.one">Project 01</span>
+          <h3>FZLink</h3>
+          <p data-i18n="projects.fzlink">FZLink is my link hub for collecting and presenting my sites and social profiles.</p>
+          <a class="project-link" href="https://fzaoao.cc.cd" target="_blank" rel="noreferrer">fzaoao.cc.cd</a>
+        </article>
+        <article class="project-item">
+          <span class="profile-label" data-i18n="projects.two">Project 02</span>
+          <h3>CubeXMC</h3>
+          <p data-i18n="projects.cubex">CubeXMC is my Minecraft server. Visit the official website to learn more.</p>
+          <a class="project-link" href="https://cubexmc.org" target="_blank" rel="noreferrer">cubexmc.org</a>
+        </article>
+        <article class="project-item">
+          <span class="profile-label" data-i18n="projects.three">Project 03</span>
+          <h3>S3API</h3>
+          <p data-i18n="projects.s3api">S3API is an API relay service for connecting and forwarding AI API requests.</p>
+          <a class="project-link" href="https://ai.furry.vg" target="_blank" rel="noreferrer">ai.furry.vg</a>
+        </article>
+      </div>
+    </section>
 
-    document.getElementById('searchInput').addEventListener('input', e => {
-      filterLinks(e.target.value);
-    });
+    <section id="links" class="links-section">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="section.links">Links</h2>
+      </div>
+      <div class="link-list">
+        <a class="link-row" href="https://space.bilibili.com/3546596641868091" target="_blank" rel="noreferrer">
+          <span>Bilibili</span>
+          <strong>space.bilibili.com/3546596641868091</strong>
+        </a>
+        <a class="link-row" href="https://x.com/FZAoao" target="_blank" rel="noreferrer">
+          <span>X</span>
+          <strong>x.com/FZAoao</strong>
+        </a>
+        <a class="link-row" href="https://github.com/FZAoao" target="_blank" rel="noreferrer">
+          <span>GitHub</span>
+          <strong>github.com/FZAoao</strong>
+        </a>
+        <a class="link-row" href="https://fzaoao.cc.cd" target="_blank" rel="noreferrer">
+          <span>FZLink</span>
+          <strong>fzaoao.cc.cd</strong>
+        </a>
+        <a class="link-row" href="https://cubexmc.org" target="_blank" rel="noreferrer">
+          <span>CubeXMC</span>
+          <strong>cubexmc.org</strong>
+        </a>
+        <a class="link-row" href="https://ai.furry.vg" target="_blank" rel="noreferrer">
+          <span>S3API</span>
+          <strong>ai.furry.vg</strong>
+        </a>
+        <a class="link-row" href="mailto:mcofprc@outlook.com">
+          <span>Email</span>
+          <strong>mcofprc@outlook.com</strong>
+        </a>
+      </div>
+    </section>
 
-    render(links);
-  </script>
+    <footer class="footer-cta">
+      <a class="massive-link" href="mailto:mcofprc@outlook.com">
+        <span class="massive-link-normal">CONTACT</span>
+        <span class="massive-link-hover">CONTACT</span>
+      </a>
+      <div class="footer-bottom">
+        <span data-i18n="footer.site">FZAoao Personal Site</span>
+        <span data-i18n="footer.tags">Code / Furry / Dragon Cub</span>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
