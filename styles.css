@@ -524,12 +524,27 @@ a {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 10vw;
   font-family: Inter, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.footer-record {
+  color: var(--text-primary);
+  opacity: 0.72;
+  text-decoration: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.footer-record:hover {
+  opacity: 1;
+  transform: translateY(-1px);
 }
 
 @media (max-width: 760px) {
